@@ -26,6 +26,7 @@ def calc_average_temperature(q):
 
     average = sum/len(numbers)
     print("The average is "+ str(average))
+    return average
 
 def calc_min_max_temperature(q):
     minval = q[0]
@@ -37,16 +38,20 @@ def calc_min_max_temperature(q):
             maxval = i
     print("The minimum value is "+ str(minval))
     print("The maximum value is "+str(maxval))
+    return [minval,maxval]
+
 
 def calc_median_temperature(q):
     size = len(q)
     if (size%2==1):
         location1 = int(size / 2)
-        print("The value in the middle is " + str(q[location1]))
+        median_value=q[location1]
+        print("The value in the middle is " + str(median_value))
     else:
         location2 = int((size / 2)-1)
         median_value = q[location2]+0.5
         print("The value in the middle is " + str(median_value))
-        
+
+    return median_value
 if __name__ == "__main__":
     main()
